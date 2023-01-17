@@ -1,0 +1,22 @@
+<h3 class="text-center">employee-list works!</h3>
+
+<table class="table table-bordered table-striped table-success">
+    <thead>
+        <tr>
+            <th>Employee Id</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of employees">
+            <td>{{emp.id}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.sal}}</td>
+            <td>
+                <button (click)="deleteEmp(emp.id)" class="btn btn-danger">DELETE</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
